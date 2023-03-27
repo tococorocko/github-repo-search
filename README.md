@@ -1,16 +1,16 @@
 # Project
 
-[github_repos_search.com](https://....com)
+[github-repo-search.com](https://github-repo-search.herokuapp.com/)
 
-Basic Github search powered by Ruby on Rails 7 and Stimulus JS
+Basic public repository search via Github API powered by Ruby on Rails 7 and Stimulus JS
 
 ## Install
 
 ### Clone the repository
 
 ```shell
-git clone git@github.com:tococorocko/github_repos_search.git
-cd github_repos_search
+git clone git@github.com:tococorocko/github-repo-search.git
+cd github-repo-search
 ```
 
 ### Check your Ruby version
@@ -40,7 +40,7 @@ bundle && yarn
 Using [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli):
 
 ```shell
-heroku git:remote -a github_repos_search
+heroku git:remote -a github-repo-search
 ```
 
 ## Serve
