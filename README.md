@@ -1,24 +1,66 @@
-# README
+# Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[github_repos_search.com](https://....com)
 
-Things you may want to cover:
+Basic Github search powered by Ruby on Rails 7 and Stimulus JS
 
-* Ruby version
+## Install
 
-* System dependencies
+### Clone the repository
 
-* Configuration
+```shell
+git clone git@github.com:tococorocko/github_repos_search.git
+cd github_repos_search
+```
 
-* Database creation
+### Check your Ruby version
 
-* Database initialization
+```shell
+ruby -v
+```
 
-* How to run the test suite
+The ouput should start with something like `ruby 3.x`
 
-* Services (job queues, cache servers, search engines, etc.)
+If not, install the right ruby version using [rbenv](https://github.com/rbenv/rbenv) (it could take a while):
 
-* Deployment instructions
+```shell
+rbenv install 3.1.5
+```
 
-* ...
+### Install dependencies
+
+Using [Bundler](https://github.com/bundler/bundler) and [Yarn](https://github.com/yarnpkg/yarn):
+
+```shell
+bundle && yarn
+```
+
+### Add heroku remotes
+
+Using [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli):
+
+```shell
+heroku git:remote -a github_repos_search
+```
+
+## Serve
+
+```shell
+rails s
+# or with assets
+bin/dev
+```
+
+## Specs/tests
+
+```shell
+bundle exec rspec
+```
+
+## Deploy
+
+Push to Heroku production remote:
+
+```shell
+git push heroku
+```
