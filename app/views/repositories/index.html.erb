@@ -1,14 +1,22 @@
-<div>
-  <h1 class="text-primary" >Github Repository Search</h1>
+<div class="p-2 col-6">
+  <h1 class="text-primary m-2" >Github Repository Search</h1>
 </div>
-<div>
-  <p>Enter a search term to find public Github repositories</p>
+<div class="m-2 p- col-6">
+  <p>Enter name of repository to search term. As you are not logged in, there is a rate limit.</p>
 </div>
 
-<div>
-	<%= form_with url: "/repositories/search", method: :get do |form| %>
-		<%= form.label :query, "Repository name:" %>
-		<%= form.text_field :query %>
-		<%= form.submit "Search" %>
+<div class="search_form col-6" data-controller="repositories">
+	<%= form_with url: "/repositories/search", method: :get, data: { action: "repositories#search" } do |form| %>
+	  <div class="form-row">
+			<div class="form-group p-2">
+				<%= form.label :query, "Search Term", class:"m-2" %>
+				<%= form.text_field :query, class:"form-control", placeholder:"Enter search term", data: { target: "repositories.query" } %>
+			</div>
+  	</div>
+		<%= form.submit "Search", class:"btn btn-primary m-2" %>
 	<% end %>
+	<div class="m-2 p-2">
+		<h4 data-repositories-target="total"></h4>
+		<ul data-repositories-target="results"></ul>
+	</div>
 </div>
