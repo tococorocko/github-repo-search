@@ -1,0 +1,14 @@
+<div>
+  <h1 class="text-primary" >Github Repository Search</h1>
+</div>
+<div>
+  <p>Enter a search term to find public Github repositories</p>
+</div>
+
+<div>
+	<%= form_with url: "/repositories/search", method: :get do |form| %>
+		<%= form.label :query, "Repository name:" %>
+		<%= form.text_field :query %>
+		<%= form.submit "Search" %>
+	<% end %>
+</div>
